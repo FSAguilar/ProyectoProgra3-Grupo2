@@ -59,7 +59,9 @@ fun UbicacionBlock(
                 modifier = Modifier
                     .fillMaxWidth()
                     .heightIn(min = 48.dp),
-                shape = MaterialTheme.shapes.medium
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = MaterialTheme.colorScheme.primary
+                )
             ) {
                 Icon(
                     imageVector = Icons.Rounded.LocationOn,
