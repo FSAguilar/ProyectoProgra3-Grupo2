@@ -71,7 +71,14 @@ fun NavGraph() {
                 onCrearLobby = { navController.navigate(Rutas.CREAR_LOBBY) },
                 onDetalle = { navController.navigate(Rutas.detalle(it)) },
             )
-            misLobbiesGraph()
+            misLobbiesGraph(
+                onDetalle = { navController.navigate(Rutas.detalle(it)) },
+                onExplorar = {
+                    if (!navController.popBackStack(Rutas.EXPLORAR, inclusive = false)) {
+                        navController.navigate(Rutas.EXPLORAR)
+                    }
+                },
+            )
             chatGraph()
             perfilGraph(onAdmin = { navController.navigate(Rutas.ADMIN) })
             crearLobbyGraph(
