@@ -4,13 +4,24 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.example.vamospues.ui.screens.moderacion.ResultadoPublicacionScreen
 
-fun NavGraphBuilder.moderacionGraph() {
+fun NavGraphBuilder.moderacionGraph(
+    onVolverExplorar: () -> Unit = {},
+    onVerLobby: (String) -> Unit = {},
+    onEditarLobby: (String) -> Unit = {}
+) {
     composable(
         route = Rutas.MODERACION,
         arguments = listOf(navArgument(Rutas.ARG_ESTADO) { type = NavType.StringType }),
-    ) {
-        DestinoProvisional("Moderación")
+    ) { entrada ->
+        val estado = entrada.arguments?.getString(Rutas.ARG_ESTADO) ?: "PENDIENTE_REVISION"
+        ResultadoPublicacionScreen(
+            estadoInicial = estado,
+            onVolverExplorar = onVolverExplorar,
+            onVerLobby = onVerLobby,
+            onEditarLobby = onEditarLobby,
+            onBackClick = {}
+        )
     }
 }
-
