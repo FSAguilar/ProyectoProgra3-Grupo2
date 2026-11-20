@@ -19,13 +19,20 @@ private val LightColorScheme = lightColorScheme(
     secondaryContainer = SecondaryContainerLight,
     tertiary = TertiaryLight,
     onTertiary = OnTertiaryLight,
+    background = SurfaceLight,
+    onBackground = OnSurfaceLight,
     surface = SurfaceLight,
     onSurface = OnSurfaceLight,
     surfaceVariant = SurfaceVariantLight,
     onSurfaceVariant = OnSurfaceVariantLight,
     error = ErrorLight,
     onError = OnErrorLight,
-    outline = OutlineLight
+    outline = OutlineLight,
+    surfaceContainerLowest = SurfaceContainerLowestLight,
+    surfaceContainerLow = SurfaceContainerLowLight,
+    surfaceContainer = SurfaceContainerLight,
+    surfaceContainerHigh = SurfaceContainerHighLight,
+    surfaceContainerHighest = SurfaceContainerHighestLight
 )
 
 private val DarkColorScheme = darkColorScheme(
@@ -37,13 +44,20 @@ private val DarkColorScheme = darkColorScheme(
     secondaryContainer = SecondaryContainerDark,
     tertiary = TertiaryDark,
     onTertiary = OnTertiaryDark,
+    background = SurfaceDark,
+    onBackground = OnSurfaceDark,
     surface = SurfaceDark,
     onSurface = OnSurfaceDark,
     surfaceVariant = SurfaceVariantDark,
     onSurfaceVariant = OnSurfaceVariantDark,
     error = ErrorDark,
     onError = OnErrorDark,
-    outline = OutlineDark
+    outline = OutlineDark,
+    surfaceContainerLowest = SurfaceContainerLowestDark,
+    surfaceContainerLow = SurfaceContainerLowDark,
+    surfaceContainer = SurfaceContainerDark,
+    surfaceContainerHigh = SurfaceContainerHighDark,
+    surfaceContainerHighest = SurfaceContainerHighestDark
 )
 
 @Composable

@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.vamospues.Config
 import com.example.vamospues.data.FakeData
 import com.example.vamospues.model.Lobby
 import com.example.vamospues.model.estado.Activo

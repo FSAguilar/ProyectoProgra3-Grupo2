@@ -68,7 +68,7 @@ fun CrearLobbyScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
-            if (com.example.vamospues.ui.components.Config.MODO_DEMO) {
+            if (com.example.vamospues.Config.MODO_DEMO) {
                 DemoEstadoSelector(
                     estados = listOf("Datos", "Validación", "Publicando"),
                     estadoActual = when (varianteDemo) {

@@ -2,7 +2,7 @@ package com.example.vamospues.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AccountCircle
+import androidx.compose.material.icons.outlined.AccountCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,7 +29,7 @@ fun ParticipanteItem(
             modifier = Modifier.weight(1f)
         ) {
             Icon(
-                imageVector = Icons.Rounded.AccountCircle,
+                imageVector = Icons.Outlined.AccountCircle,
                 contentDescription = "Avatar de $nombre",
                 tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.size(36.dp)

@@ -11,11 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.vamospues.Config
 import com.example.vamospues.ui.theme.MyApplicationTheme
-
-object Config {
-    const val MODO_DEMO = true
-}
 
 @Composable
 fun DemoEstadoSelector(
