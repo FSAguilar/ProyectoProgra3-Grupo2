@@ -60,7 +60,7 @@ fun ResultadoPublicacionScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
-            if (com.example.vamospues.ui.components.Config.MODO_DEMO) {
+            if (com.example.vamospues.Config.MODO_DEMO) {
                 DemoEstadoSelector(
                     estados = listOf("Pendiente", "Aprobado", "Rechazado"),
                     estadoActual = when (estadoActualStr) {

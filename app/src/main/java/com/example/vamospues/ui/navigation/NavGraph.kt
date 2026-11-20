@@ -74,9 +74,26 @@ fun NavGraph() {
             misLobbiesGraph()
             chatGraph()
             perfilGraph(onAdmin = { navController.navigate(Rutas.ADMIN) })
-            crearLobbyGraph(onModeracion = { navController.navigate(Rutas.moderacion(it)) })
-            moderacionGraph()
-            detalleGraph(onCheckIn = { navController.navigate(Rutas.checkin(it)) })
+            crearLobbyGraph(
+                onModeracion = { navController.navigate(Rutas.moderacion(it)) },
+                onVolver = { navController.navigateUp() },
+            )
+            moderacionGraph(
+                onVolverExplorar = { navController.popBackStack(Rutas.EXPLORAR, inclusive = false) },
+                onVerLobby = { lobbyId ->
+                    navController.navigate(Rutas.detalle(lobbyId)) { popUpTo(Rutas.EXPLORAR) }
+                },
+                onEditarLobby = {
+                    if (!navController.popBackStack(Rutas.CREAR_LOBBY, inclusive = false)) {
+                        navController.navigate(Rutas.CREAR_LOBBY)
+                    }
+                },
+                onVolver = { navController.navigateUp() },
+            )
+            detalleGraph(
+                onCheckIn = { navController.navigate(Rutas.checkin(it)) },
+                onVolver = { navController.navigateUp() },
+            )
             checkInGraph()
             adminGraph()
         }
